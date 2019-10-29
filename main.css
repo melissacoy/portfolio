@@ -54,9 +54,12 @@ li{
     margin-right: auto;
     margin-left: auto;
 }
-ul input[type="image"]{
+ul img{
     height: 30px;
     width: auto;
+}
+.heading{
+    padding-top: .3em;
 }
 .hero {
     padding-left: 2em;
@@ -71,9 +74,23 @@ ul input[type="image"]{
     padding-bottom: 1.8em;
     font-size: 1.2em;
 }
+.bio{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+    line-height: 2em;
+    font-size: 1.2em; 
+}
+.bio p{
+    margin-bottom: 1.2em;
+}
 .cta{
     text-align: center;
-    margin-bottom: 1.5em;
+    margin-top: 1.2em;
+    margin-bottom: .8em;
 }
 button{
     height: 100px;
@@ -89,4 +106,58 @@ button a{
     color: white;
     font-weight: bold;;
     border: none;
+}
+
+
+.container{
+    background-color: light-grey;
+}
+h2{ 
+font-size: 2em;
+text-align: center;
+}
+.app {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app p{
+    width: 50%;
+    margin-bottom: 2em;
+}
+.app img{
+    width: 50%;
+    text-align: right;
+}
+.form-container{
+    width: 70%;
+    display: block;
+    background: grey;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+}
+form * {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ 
+ width: 90%;
+ color: white;
+ padding: 8px;
+ 
+
+}
+
+form button{
+    height: 5em;
+    width: 5em;
+    border: none;
+    padding: 1em;
+}
+#message{
+    height: 250px;
+    padding-bottom: 1em;
 }
