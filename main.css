@@ -1,0 +1,92 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+    text-decoration: none;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+/*------ begin ------*/
+header {
+    background: grey;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+header * {
+    display: inline-block;  
+    margin-right: .5em;
+    margin-left: .5em;
+    font-size: 2em;
+    color: white;
+    height: 50px;
+    justify-items: baseline;
+}
+ul {
+    width: 100%;
+    background: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+li{
+    padding: .5em;
+    margin-right: auto;
+    margin-left: auto;
+}
+ul input[type="image"]{
+    height: 30px;
+    width: auto;
+}
+.hero {
+    padding-left: 2em;
+    padding-right: 3em;
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+    font-size: 2.3em;
+}
+.headline {
+    padding-left: 3.3em;
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+    font-size: 1.2em;
+}
+.cta{
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+button{
+    height: 100px;
+    width: 100px;
+    padding: 0, 0;
+    cursor: pointer;
+    background: url("images/hex.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+}
+button a{
+    color: white;
+    font-weight: bold;;
+    border: none;
+}
