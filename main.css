@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    font-family: 'Ubuntu', sans-serif;
+    color: white;
     font-family: 'Cabin', sans-serif;
     
   }
@@ -15,6 +15,7 @@ html {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    ;
   }
   
   ol, ul {
@@ -27,21 +28,32 @@ html {
   }
 /*------ begin ------*/
 header {
-    background: grey;
+    font-family: 'Ubuntu', sans-serif;
+    background: black;
     background-size: cover;
+    height: 60px;
+   
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    text-shadow: 1px 1px #313131, 
+                2px 2px #313131, 
+                3px 3px #313131;
     
 }
 header * {
     display: inline-block;  
-    margin-right: .5em;
-    margin-left: .5em;
     font-size: 2em;
-    color: white;
-    height: 50px;
-    justify-items: baseline;
+    margin-top: 3px;
+    margin-right: 5px;
+    margin-right: 5px;
+    height: 48px;
+}
+header input[type="image"]{
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+   
 }
 ul {
     width: 100%;
@@ -59,86 +71,210 @@ ul img{
     height: 30px;
     width: auto;
 }
+
+main {
+    background: #414141;
+    font-family: 'Cabin', sans-serif;
+    padding-bottom: 2em;
+}
 .heading{
     padding-top: .3em;
 }
 .hero {
+    font-family: 'Ubuntu', sans-serif;
     padding-left: 2em;
     padding-right: 3em;
     padding-top: 1.8em;
     padding-bottom: 1.8em;
     font-size: 2.3em;
+    color: white;
+    text-shadow: 1px 1px #313131, 
+                 2px 2px #313131, 
+                 3px 3px #313131,
+                 4px 4px #313131, 
+                 5px 5px #313131, 
+                 6px 6px #313131;
 }
+
 .headline {
-    padding-left: 3.3em;
-    padding-top: 1.8em;
-    padding-bottom: 1.8em;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.2em;
+    text-shadow: 1px 1px #313131, 
+                 2px 2px #313131, 
+                 3px 3px #313131;
 }
 .bio{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    
     padding-top: 1.8em;
     padding-bottom: 1.8em;
     line-height: 2em;
     font-size: 1.2em; 
 }
-.bio p{
-    margin-bottom: 1.2em;
-}
 .cta{
     text-align: center;
     margin-top: 1.2em;
-    margin-bottom: .8em;
 }
-button{
-    height: 100px;
-    width: 100px;
-    padding: 0, 0;
-    cursor: pointer;
-    background: url("images/hex.png") no-repeat;
-    background-size: contain;
-    background-position: center;
-    
+footer {
+    background: black;
+    background-size: cover;
+    height: 30px;
+}
+
+button {
+    background-color:#009b74;
+	border-radius: 28px;
+	border:1px solid #009b74;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #12654f;
 }
 button a{
     color: white;
     font-weight: bold;;
     border: none;
 }
+button:hover {
+    background-color:#1bb488;
+  }
+button:active{
+    position:relative;
+	top:1px;
+}
 
-.container{
-    background-color: light-grey;
+/* ---- APP Display ----- */
+.app-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto 0 auto;
 }
 h2{ 
 font-size: 2em;
 text-align: center;
 }
-.app {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.app-image{
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
 }
-
-.app p{
-    width: 50%;
-    margin-bottom: 2em;
+.app-container:hover .image{
+    opacity: 0.3;
 }
-.app img{
-    width: 50%;
-    text-align: right;
+.overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.app-container:hover .overlay{
+    opacity: 1;
+}
+.app-cap{ 
+    background-color: #159a75;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px
 }
 .form-container{
     width: 70%;
     display: block;
-    background: grey;
+    
     
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5em;
+    
 }
+/* ----- FORM ----- */
+
+#form {
+    
+    width: 100%;
+    margin: 50px auto 100px auto;
+  }
+  
+  form input {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.875em;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    
+    background: transparent;
+    outline: none;
+    color: #ffffff;
+    
+    border: solid 1px #ffffff;
+    border-bottom: none;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  input:hover {
+    background: #98d3c4;
+    color: #12654f;
+  }
+  
+  textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 110px;
+    
+    padding: 15px;
+    
+    background: transparent;
+    outline: none;
+    
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    
+    border: solid 1px #ffffff;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  textarea:hover {
+    background: #98d3c4;
+    color: #12654f;
+  }
+  
+  #submit-form {
+    width: 30%;
+    margin: 10px auto 0 auto;
+    background-color: #009b74;
+	border-radius: 28px;
+	border:1px solid #009b74;
+	display: block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #12654f;
+  }
+  
+  #submit-form:hover {
+    background-color:#1bb488;
+  }
+/*
 form * {
  display: block;
  margin-left: auto;
@@ -147,12 +283,13 @@ form * {
  width: 90%;
  color: white;
  padding: 8px;
- 
-
 }
 
 form button{
-    height: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .2em;
+    margin-bottom;: .2em;
     width: 5em;
     border: none;
     padding: 1em;
@@ -160,4 +297,4 @@ form button{
 #message{
     height: 250px;
     padding-bottom: 1em;
-}
+} */

@@ -11,12 +11,12 @@
 </head>
 <body>
     <header role="banner" class="banner">
-        <img src="images/settings.png" alt="logo" type="logo">
+        <a href="index.html"><img src="images/m-logo.png" alt="home" type="logo"></a>
         <p class="heading">work</p>
-        <input type="image" id="image" alt="menu" src="images/menu.png">
+        <input type="image" id="image" alt="menu" src="images/burger.png">
     </header>
     <nav>
-        <ul>
+        <ul class="js-navDropDown">
             <li><a href="about.html"><img alt="about-me" src="images/user.png"></a></li>
             <li><a href="work.html"><img alt="my-work" src="images/list.png"></a></li>
             <li><a href="contact.html"><img alt="contact-me" src="images/email.png"></a></li>
@@ -27,19 +27,26 @@
             <h1>here's some of my work:
             </h1>
         </section>
-        <section class="container">
+        <section class="app-container">
             <h2>Dino Quiz</h2>
             <div class="app">
-            <p>A simple, click-through quiz game that asks a limited set of questions about dinosaurs.</p>
-            <p>Built with JavaScript and jQuery.</p>
-            <img src="images/dino-quiz-preview.png" alt="web page with simple quiz interface and small dinosaur">
-        </div>
+            <img src="images/dino-quiz-preview.png" class="app-image" alt="web page with simple quiz interface and small dinosaur">
+            <div class="overlay">
+            <div class="app-cap">A simple, click-through quiz game that asks a limited set of questions about dinosaurs.</div>
+            <div class="app-cap">Built with JavaScript and jQuery.</div> 
+                </div>
+            </div>
         </section>
         <section role="cta" class="cta">
              <button type="button"><a href="work.html">view my work</a></button>
         </section>
 
     </main>
-   
+    <footer>    
+    </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 </body>
 </html>
