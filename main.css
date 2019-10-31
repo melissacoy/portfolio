@@ -57,19 +57,27 @@ header input[type="image"]{
 }
 ul {
     width: 100%;
+    height: 40px;
     background: lightgray;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 } 
 li{
-    padding: .5em;
+    padding; 8px;
     margin-right: auto;
     margin-left: auto;
+    color: #ffffff;
 }
 ul img{
     height: 30px;
     width: auto;
+    visibility: hidden;
+}
+ul a{
+    color: #009b74;
+    font-size: 18px;
+    visibility: visible;
 }
 
 main {
