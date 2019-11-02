@@ -1,3 +1,4 @@
+/*------ RESET ------*/
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -15,6 +16,7 @@ html {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    background-color: #414141;
     ;
   }
   
@@ -26,22 +28,21 @@ html {
     max-width: 100%;
     height: auto;
   }
-/*------ begin ------*/
+/*------ MAIN ------*/
 header {
     font-family: 'Ubuntu', sans-serif;
     background: black;
     background-size: cover;
     height: 60px;
-   
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     text-shadow: 1px 1px #313131, 
                 2px 2px #313131, 
-                3px 3px #313131;
-    
+                3px 3px #313131;  
 }
 header * {
+    background: black;
     display: inline-block;  
     text-align: center;
     font-size: 2em;
@@ -50,11 +51,10 @@ header * {
     margin-right: 5px;
     height: 48px;
 }
-
-header img{
+.logo{
     position: absolute; 
     top: 3px;
-    left: 15%;
+    left: 8%;
 }
 
 ul {
@@ -90,7 +90,7 @@ main {
     padding-right: 3em;
     padding-top: 1.8em;
     padding-bottom: 1.8em;
-    font-size: 2.3em;
+    font-size: 24px;
     color: white;
     text-shadow: 1px 1px #313131, 
                  2px 2px #313131, 
@@ -104,6 +104,7 @@ main {
     position: absolute;
     top: 20%;
     right: 4%;
+    visibility: hidden;
 }
 .rotated:hover{
     transform: rotate(45deg);
@@ -111,7 +112,7 @@ main {
 .headline {
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.2em;
+    font-size: 20px;
     text-shadow: 1px 1px #313131, 
                  2px 2px #313131, 
                  3px 3px #313131;
@@ -130,11 +131,12 @@ main {
     margin-top: 1.2em;
 }
 footer {
+    position: absolute;
+    bottom: 0;
     background: black;
     background-size: cover;
     height: 30px;
 }
-
 button {
     background-color:#009b74;
 	border-radius: 28px;
@@ -162,12 +164,30 @@ button:active{
 button:focus{
     outline: 0;
 }
-
+address ul{
+    background: none;
+    display: flex;
+    flex-direction: column;
+}
+address a{
+    color: #ffffff;
+}
+address a:hover{
+    color: #98d3c4;
+}
 /* ---- APP Display ----- */
 .app-container {
     position: relative;
     width: 70%;
     margin: 0 auto 0 auto;
+}
+.app-container a{
+    font-size: 16px;
+    color: #ffffff; 
+}
+.app-link {
+    text-align: center;
+    padding: 10px;
 }
 h2{ 
 font-size: 2em;
@@ -179,9 +199,6 @@ text-align: center;
     height: auto;
     transition: .5s ease;
 }
-.app-container:hover .image{
-    opacity: 0.3;
-}
 .overlay {
     transition: .5s ease;
     opacity: 0;
@@ -192,8 +209,9 @@ text-align: center;
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
-.app-container:hover .overlay{
-    opacity: 1;
+.app-caption{
+    color: #ffffff;
+    text-align: center;
 }
 .app-cap{ 
     background-color: #159a75;
@@ -201,114 +219,57 @@ text-align: center;
     font-size: 16px;
     padding: 16px 32px
 }
-.form-container{
-    width: 70%;
-    display: block;
+/*------ 600PX SCREEN BREAK ------*/
+@media screen and (min-width: 600px) {
 
-    margin-left: auto;
-    margin-right: auto;
-    
+.logo{
+    position: absolute; 
+    top: 3px;
+    left: 8%;
 }
-/* ----- FORM ----- */
+/* nav list item*/
+ul a{ 
+    font-size: 18px;
+}
+.hero img{
+    visibility: visible;
+    opacity: .1;
+}
+/* APP EXAMPLE DISPLAY*/
 
-#form {
-    
-    width: 100%;
-    margin: 50px auto 100px auto;
-  }
-  
-  form input {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 0.875em;
-    width: 100%;
+.app-container a:hover{
+    color: #98d3c4; 
+}
+.app-container:hover .image{
+    opacity: 0.3;
+}
+.app-container:hover .overlay{
+    opacity: 1;
+    background-image: url("final-score.png");
+}
+.app-caption{
+    visibility: hidden;
+}
+}
+/*------ 800PX SCREEN BREAK ------*/
+@media screen and (min-width: 800px) {
+ .hero img{
+     opacity: .5;
+     top: 90px;
+    }
+ .hero {
+     padding-left: 3.5em;
+ }
+ .headline {
     max-width: 500px;
-    height: 50px;
-    padding: 0px 15px 0px 15px;
-    
-    background: transparent;
-    outline: none;
-    color: #ffffff;
-    
-    border: solid 1px #ffffff;
-    border-bottom: none;
-    
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-  }
-  
-  input:hover {
-    background: #98d3c4;
-    color: #12654f;
-  }
-  
-  textarea {
-    width: 100%;
-    max-width: 500px;
-    height: 110px;
-    
-    padding: 15px;
-    
-    background: transparent;
-    outline: none;
-    
-    color: #ffffff;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.875em;
-    
-    border: solid 1px #ffffff;
-    
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-  }
-  
-  textarea:hover {
-    background: #98d3c4;
-    color: #12654f;
-  }
-  
-  #submit-form {
-    width: 30%;
-    margin: 10px auto 0 auto;
-    background-color: #009b74;
-	border-radius: 28px;
-	border:1px solid #009b74;
-	display: block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #12654f;
-  }
-  
-  #submit-form:hover {
-    background-color:#1bb488;
-  }
-/*
-form * {
- display: block;
- margin-left: auto;
- margin-right: auto;
- 
- width: 90%;
- color: white;
- padding: 8px;
 }
-
-form button{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: .2em;
-    margin-bottom;: .2em;
-    width: 5em;
-    border: none;
-    padding: 1em;
 }
-#message{
-    height: 250px;
-    padding-bottom: 1em;
-} */
+/*------ 1000PX SCREEN BREAK ------*/
+@media screen and (min-width: 1000px) {
+    .hero {
+        margin: auto 300px auto 300px;
+    }
+    .hero img{
+        opacity: .5;
+        right: 20%;
+       }
