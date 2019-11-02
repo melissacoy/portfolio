@@ -258,7 +258,7 @@ ul a{
      top: 90px;
     }
  .hero {
-     padding-left: 3.5em;
+     padding-left: 3em;
  }
  .headline {
     max-width: 500px;
@@ -267,7 +267,7 @@ ul a{
 /*------ 1000PX SCREEN BREAK ------*/
 @media screen and (min-width: 1000px) {
     .hero {
-        margin: auto 300px auto 300px;
+        margin: auto 40% auto 60%;
     }
     .hero img{
         opacity: .5;
