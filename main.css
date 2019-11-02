@@ -224,7 +224,7 @@ text-align: center;
 
 .logo{
     position: absolute; 
-    top: 3px;
+    top: 20%
     left: 8%;
 }
 /* nav list item*/
@@ -255,7 +255,7 @@ ul a{
 @media screen and (min-width: 800px) {
  .hero img{
      opacity: .5;
-     top: 90px;
+     right: 4em;
     }
  .hero {
      padding-left: 3em;
@@ -267,9 +267,9 @@ ul a{
 /*------ 1000PX SCREEN BREAK ------*/
 @media screen and (min-width: 1000px) {
     .hero {
-        margin: auto 40% auto 60%;
+        max-width: 800px;
     }
     .hero img{
         opacity: .5;
-        right: 20%;
+        right: 5em;
        }
