@@ -235,6 +235,9 @@ ul a{
     visibility: visible;
     opacity: .1;
 }
+.hero {
+    padding-left: 3em;
+}
 /* APP EXAMPLE DISPLAY*/
 
 .app-container a:hover{
