@@ -219,6 +219,33 @@ text-align: center;
     font-size: 16px;
     padding: 16px 32px
 }
+/*------ CONTACT BOXES------*/
+.contact-flex{
+    display: flex;
+    flex-direction: column;
+}
+.contact-box {
+    color: red;
+    background-color: lightgray; 
+    margin: 5% auto;
+    height: 240px;
+    width: 240px;
+    border-radius: 10px;
+}
+.contact-con{
+    height: 180px;
+    width: auto;
+    padding: 5% 15% 0% 15%; 
+}
+
+.contact, .contact *{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5%;
+    background-color: inherit;
+    color: #12654f;   
+}
+
 /*------ 600PX SCREEN BREAK ------*/
 @media screen and (min-width: 600px) {
 
@@ -265,6 +292,9 @@ ul a{
  }
  .headline {
     max-width: 500px;
+}
+.contact-flex{
+    flex-direction: row;
 }
 }
 /*------ 1000PX SCREEN BREAK ------*/
